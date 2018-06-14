@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'Super Mario Bros 256';
+  src: url('../font/SuperMario256.ttf') format('truetype');
+}
+
+* {
+  font-family: 'Super Mario Bros 256';
+}
+
+title {
+
+}
+
+body {
+  border: 5px dotted grey;
+  height: 100vh;
+  background: repeating-linear-gradient(
+  -45deg,
+  #f7f5e6,
+  #f7f5e6 10px,
+  #d80100 10px,
+  #d80100 20px
+  );
+}
+
+.jumbotron {
+  background-image: url('../images/jumbotron.jpg');
+}
