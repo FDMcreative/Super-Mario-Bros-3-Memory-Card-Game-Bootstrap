@@ -18,60 +18,67 @@
 
   </head>
 
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <div class="col-md-10 offset-md-1">
-        <h1>Super Mario Bros 3</h1>
-        <h4>Memory Card Game</h4>
+  <body>
 
-        <div class="buttons">
-          <button id="start">Click to Start</button>
-          <button id="reset">Click to Reset</button>
+    <!-- <header class="row">
+    </header> -->
+
+    <header class="jumbotron jumbotron-fluid">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-md-9">
+            <h1 class="display-4">Super Mario Bros 3</h1>
+            <h4>Memory Card Game</h4>
+          </div>
+
+          <aside class="col-md-3">
+            <div class="col-12" id="display">
+              <div>Wrong: <span id="wrongs">0</span></div>
+              <div>You have: <span id="items"></span></div>
+            </div>
+            <div class="col-12" id="buttons">
+              <button class="btn btn-block" id="start">Click to Start</button>
+              <button class="btn btn-block" id="reset">Click to Reset</button>
+            </div>
+          </aside>
+
         </div>
-        
-        <!-- <h1 class="display-4">Instatram</h1>
-        <p class="lead">Sign up to see photos of trains from your friends</p> -->
-      </div>
-    </div>
-  </div>
 
-  <body class="container">
-
-    <header>
-
-
-
-      <div id="display">
-        <div>Wrong: <span id="wrongs">0</span></div>
-        <div>You have: <span id="items"></span></div>
       </div>
 
     </header>
 
-    <main>
+    <main class="container">
+
 
       <div class="cards" style="display:none">
-        <div class="card" id="card1"></div>
-        <div class="card" id="card2"></div>
-        <div class="card" id="card3"></div>
-        <div class="card" id="card4"></div>
-        <div class="card" id="card5"></div>
-        <div class="card" id="card6"></div>
-        <div class="card" id="card7"></div>
-        <div class="card" id="card8"></div>
-        <div class="card" id="card9"></div>
-        <div class="card" id="card10"></div>
-        <div class="card" id="card11"></div>
-        <div class="card" id="card12"></div>
-        <div class="card" id="card13"></div>
-        <div class="card" id="card14"></div>
-        <div class="card" id="card15"></div>
-        <div class="card" id="card16"></div>
-        <div class="card" id="card17"></div>
-        <div class="card" id="card18"></div>
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card1"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card2"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card3"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card4"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card5"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card6"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card7"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card8"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card9"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card10"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card11"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card12"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card13"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card14"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card15"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card16"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card17"></div>
+          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card18"></div>
+        </div>
       </div>
 
     </main>
 
   </body>
+
 </html>

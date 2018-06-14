@@ -12,7 +12,7 @@ title {
 }
 
 body {
-  border: 5px dotted grey;
+  /* border: 5px dotted grey; */
   height: 100vh;
   background: repeating-linear-gradient(
   -45deg,
@@ -23,6 +23,15 @@ body {
   );
 }
 
+#display {
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}
+
 .jumbotron {
   background-image: url('../images/jumbotron.jpg');
+  background-position: center;
+  background-size: cover;
+  color: black;
 }
