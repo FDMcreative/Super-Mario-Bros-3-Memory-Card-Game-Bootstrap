@@ -4,7 +4,6 @@ $(() => {
   //VARIABLES & CONSTANTS
 
   const $cards = $('.cards');
-  const $card = $('.card');
   const $start = $('#start');
   const $reset = $('#reset');
   const $items = $('#items');
@@ -28,8 +27,10 @@ $(() => {
   //This sets the 2 divs back to original state AND reset storeDivs
   function storeDivsReset () {
     console.log('wrong')
-    $(storeDivs[0]).css({"pointer-events": "auto","background-color":"white", "text-indent": "-9999px", "background-image": "url('./images/ace-of-spade.jpg')"});
-    $(storeDivs[1]).css({"pointer-events": "auto","background-color":"white", "text-indent": "-9999px", "background-image": "url('./images/ace-of-spade.jpg')"});
+    $(storeDivs[0]).css({"pointer-events": "auto"});
+    $(storeDivs[0]).attr({"src": "./images/ace-of-spade.jpg"});
+    $(storeDivs[1]).css({"pointer-events": "auto"});
+    $(storeDivs[1]).attr({"src": "./images/ace-of-spade.jpg"});
     storeDivs = [];
   };
 
@@ -39,13 +40,12 @@ $(() => {
     $cards.hide();
     //This resets DISPLAY
     $display.show();
-    //sets back the ace of spades
-    $card.css({ "text-indent": "-9999px", "background-image": "url('./images/ace-of-spade.jpg')" });
+
     divIndex = 1;
-    $card.text('');
+
     deckCards = ['flower', 'flower', 'flower', 'flower', 'mushroom', 'mushroom','mushroom','mushroom', 'star', 'star', 'star', 'star', '1up', '1up', '10-coins','10-coins', '20-coins', '20-coins'];
-    $card.css({"pointer-events": "auto","background-color":"white"});
-    $card.off();
+    $cards.find('img').css({"pointer-events": "auto"});
+    $cards.find('img').off();
     $items.text('');
     console.log('RESeeET');
     $wrongs.text(0)
@@ -89,10 +89,7 @@ $(() => {
       // console.log($(e.target));
 
       //This sets the image
-      let url = ('./images/' + $(e.target).attr('id') + '.jpg');
-      console.log(url);
-      $(e.target).src = url;
-      // $(e.target).css({"background-image": "url(" + url + ")"});
+      $(e.target).attr({'src':'./images/' + $(e.target).attr('id') + '.jpg'});
 
       twoPicks[i] = $(e.target).attr('id');
       $(e.target).css({"pointer-events": "none", "background-color":"grey"})
@@ -134,7 +131,7 @@ $(() => {
           console.log('LOSssTTT');
           $display.hide();
           // $('#display').text('You Lost');
-          $card.css({"pointer-events":"none"});
+          $img.css({"pointer-events":"none"});
           setTimeout(reset, 1000);
         }
       }
