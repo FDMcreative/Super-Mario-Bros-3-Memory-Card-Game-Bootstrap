@@ -4,9 +4,10 @@
   <head>
     <meta charset="utf-8">
     <title>Super Mario Bros 3 - Memory Card Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -20,9 +21,6 @@
 
   <body>
 
-    <!-- <header class="row">
-    </header> -->
-
     <header class="jumbotron jumbotron-fluid">
 
       <div class="container">
@@ -30,18 +28,16 @@
         <div class="row">
 
           <div class="col-md-9">
-            <h1 class="display-4">Super Mario Bros 3</h1>
+            <h1>Super Mario Bros 3</h1>
             <h4>Memory Card Game</h4>
           </div>
 
-          <aside class="col-md-3">
+          <aside class="col-md-3" id="buttons">
+            <button class="btn btn-block" id="start">Start</button>
+            <button class="btn btn-block" id="reset">Reset</button>
             <div class="col-12" id="display">
               <div>Wrong: <span id="wrongs">0</span></div>
               <div>You have: <span id="items"></span></div>
-            </div>
-            <div class="col-12" id="buttons">
-              <button class="btn btn-block" id="start">Click to Start</button>
-              <button class="btn btn-block" id="reset">Click to Reset</button>
             </div>
           </aside>
 
@@ -53,27 +49,62 @@
 
     <main class="container">
 
-
-      <div class="cards" style="display:none">
+      <div class="cards" >
         <div class="row">
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card1"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card2"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card3"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card4"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card5"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card6"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card7"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card8"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card9"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card10"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card11"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card12"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card13"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card14"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card15"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card16"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card17"></div>
-          <div class="col-sm-6 col-md-4 col-lg-2 card" id="card18"></div>
+          <div class="text-center col-4 col-md-2" id="card1">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card2">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card3">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card4">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card5">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card6">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card7">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card8">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card9">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card10">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card11">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card12">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card13">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card14">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card15">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card16">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card17">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
+          <div class="text-center col-4 col-md-2" id="card18">
+            <img class="img-fluid img-thumbnail" src="./images/ace-of-spade.jpg">
+          </div>
         </div>
       </div>
 

@@ -58,7 +58,7 @@ $(() => {
   function start() {
 
     //This shows the cards
-    $cards.css({"display":"block"});
+    // $cards.css({"display":"block"});
 
     //This sets the Cards on the Table Randomly
     while (deckCards.length > 0) {
@@ -66,32 +66,36 @@ $(() => {
       //This gets a random Element from the card deck and its Index
       let randomNumber = Math.floor(Math.random() * deckCards.length);
       let randomCard = deckCards[randomNumber];
-      let indexArray = deckCards.indexOf(deckCards[randomNumber]);
+      let indexArray = deckCards.indexOf(randomCard);
       // console.log(randomCard, indexArray);
 
       //removes that Element from the Deck
       deckCards.splice(indexArray, 1);
       // console.log('remaining cards: ' + deckCards);
 
-      //puts that Element inside a Div and advances to the next one
+      //sets that Element as ID, sets the Ace image and advances to the next div
       let div = ('#' + 'card' + divIndex);
       // console.log(div);
-      $(div).text(randomCard);
+      $('img', $(div)).attr({
+        "id" : randomCard,
+        "src" : "./images/ace-of-spade.jpg"
+      });
       divIndex++;
 
     };
 
     //This Picks a Card
-    $cards.children().on('click', (e) => {
+    $('img').on('click', (e) => {
 
       //This removes the ace of spades
       $(e.target).css({"background-image": "none"});
       //This brings the text in the foreground
-      // $(e.target).css({"text-indent": "1px"});
+      $(e.target).css({"text-indent": "1px"});
       //This sets the image
       let url = ('./images/' + $(e.target).text() + '.jpg');
       // console.log(url);
-      $(e.target).css({"background-image": "url(" + url + ")"});
+      $('img', $(this)).src = './images/' + $(e.target).text() + '.jpg';
+      // $(e.target).css({"background-image": "url(" + url + ")"});
 
       twoPicks[i] = $(e.target).text();
       $(e.target).css({"pointer-events": "none", "background-color":"grey"})
