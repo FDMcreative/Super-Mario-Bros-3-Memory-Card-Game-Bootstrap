@@ -20,7 +20,9 @@ $(() => {
   let deckCards = ['flower', 'flower', 'flower', 'flower', 'mushroom', 'mushroom','mushroom','mushroom', 'star', 'star', 'star', 'star', '1up', '1up', '10-coins','10-coins', '20-coins', '20-coins'];
   // console.log(deckCards);
 
-  // let randomNumber = Math.floor(Math.random() * deckCards.length);
+  // This hides Cards & Display
+  $cards.hide();
+  $display.hide();
 
   //FUNCTIONS
 
@@ -39,13 +41,14 @@ $(() => {
     //This hides the cards
     $cards.hide();
     //This resets DISPLAY
-    $display.show();
+    $display.hide();
 
     divIndex = 1;
 
     deckCards = ['flower', 'flower', 'flower', 'flower', 'mushroom', 'mushroom','mushroom','mushroom', 'star', 'star', 'star', 'star', '1up', '1up', '10-coins','10-coins', '20-coins', '20-coins'];
     $cards.find('img').css({"pointer-events": "auto"});
     $cards.find('img').off();
+    $cards.find('img').attr({"src": ""});
     $items.text('');
     console.log('RESeeET');
     $wrongs.text(0)
@@ -57,8 +60,9 @@ $(() => {
   //This starts the Game
   function start() {
 
-    //This shows the cards
-    // $cards.css({"display":"block"});
+    //This shows the cards & the Display
+    $cards.show();
+    $display.show();
 
     //This sets the Cards on the Table Randomly
     while (deckCards.length > 0) {
