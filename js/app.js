@@ -77,27 +77,24 @@ $(() => {
       let div = ('#' + 'card' + divIndex);
       // console.log(div);
       $('img', $(div)).attr({
-        "id" : randomCard,
-        "src" : "./images/ace-of-spade.jpg"
+        "id": randomCard,
+        "src": "./images/ace-of-spade.jpg"
       });
       divIndex++;
 
     };
 
-    //This Picks a Card
+    //Event Listener on Picking a Card
     $('img').on('click', (e) => {
+      // console.log($(e.target));
 
-      //This removes the ace of spades
-      $(e.target).css({"background-image": "none"});
-      //This brings the text in the foreground
-      $(e.target).css({"text-indent": "1px"});
       //This sets the image
-      let url = ('./images/' + $(e.target).text() + '.jpg');
-      // console.log(url);
-      $('img', $(this)).src = './images/' + $(e.target).text() + '.jpg';
+      let url = ('./images/' + $(e.target).attr('id') + '.jpg');
+      console.log(url);
+      $(e.target).src = url;
       // $(e.target).css({"background-image": "url(" + url + ")"});
 
-      twoPicks[i] = $(e.target).text();
+      twoPicks[i] = $(e.target).attr('id');
       $(e.target).css({"pointer-events": "none", "background-color":"grey"})
 
       console.log('twoPicks: ' + twoPicks);
