@@ -27,11 +27,15 @@ $(() => {
   //FUNCTIONS
 
   //This sets the 2 divs back to original state AND reset storeDivs
+  //$(storeDivs[1]).children():focus{outline: none !important; box-shadow: none};
   function storeDivsReset () {
     console.log('wrong')
-    $(storeDivs[0]).children().css({"pointer-events": "auto"});
+     // .btn:focus,.btn:active {outline: none !important; box-shadow: none;}
+    $(storeDivs[0]).children().blur();
+    $(storeDivs[0]).children().css({"pointer-events": "auto", "outline":"none"});
     $(storeDivs[0]).children().attr({"src": "./images/ace-of-spade.jpg"});
-    $(storeDivs[1]).children().css({"pointer-events": "auto"});
+    $(storeDivs[1]).children().blur();
+    $(storeDivs[1]).children().css({"pointer-events": "auto", "outline":"none"});
     $(storeDivs[1]).children().attr({"src": "./images/ace-of-spade.jpg"});
     storeDivs = [];
   };
