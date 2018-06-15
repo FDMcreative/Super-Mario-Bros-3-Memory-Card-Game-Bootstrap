@@ -29,10 +29,10 @@ $(() => {
   //This sets the 2 divs back to original state AND reset storeDivs
   function storeDivsReset () {
     console.log('wrong')
-    $(storeDivs[0]).css({"pointer-events": "auto"});
-    $(storeDivs[0]).attr({"src": "./images/ace-of-spade.jpg"});
-    $(storeDivs[1]).css({"pointer-events": "auto"});
-    $(storeDivs[1]).attr({"src": "./images/ace-of-spade.jpg"});
+    $(storeDivs[0]).children().css({"pointer-events": "auto"});
+    $(storeDivs[0]).children().attr({"src": "./images/ace-of-spade.jpg"});
+    $(storeDivs[1]).children().css({"pointer-events": "auto"});
+    $(storeDivs[1]).children().attr({"src": "./images/ace-of-spade.jpg"});
     storeDivs = [];
   };
 
@@ -77,15 +77,15 @@ $(() => {
       deckCards.splice(indexArray, 1);
       // console.log('remaining cards: ' + deckCards);
 
-      //sets that Element as ID, sets the Ace image and advances to the next div
+      //sets that Element as ID in an imgage, sets the Ace image
       let div = ('#' + 'card' + divIndex);
       // console.log(div);
       $('img', $(div)).attr({
         "id": randomCard,
         "src": "./images/ace-of-spade.jpg"
       });
+      // and advances to the next div
       divIndex++;
-
     };
 
     //Event Listener on Picking a Card
@@ -102,11 +102,8 @@ $(() => {
       // console.log(twoPicks[1]);
 
       //This store that Div inside an Array for a possible reset
-      // let x = $(e.target).id;
-      // console.log('x: ' + x);
-      storeDivs[i] = '#' + $(e.target).attr('id');
+      storeDivs[i] = '#' + $(e.target).parent().attr('id');
       console.log('storeDiv: ' + storeDivs);
-
       i++;
 
       //This checks the 2 Cards
@@ -121,21 +118,19 @@ $(() => {
         }
         else {
           setTimeout(storeDivsReset, 1000);
-
           twoPicks = [];
           i = 0;
           lost++;
           wrong++;
           $wrongs.text(wrong)
-
         };
 
-        //This checks if 2 lost
+        //This checks if 3 lost
         if (lost === 3) {
           console.log('LOSssTTT');
           $display.hide();
           // $('#display').text('You Lost');
-          $img.css({"pointer-events":"none"});
+          $cards.children().css({"pointer-events":"none"});
           setTimeout(reset, 1000);
         }
       }
