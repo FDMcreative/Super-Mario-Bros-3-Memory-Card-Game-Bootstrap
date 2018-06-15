@@ -17,7 +17,7 @@ $(() => {
   let yourItems = [];
   let storeDivs = [];
 
-  let deckCards = ['flower', 'flower', 'flower', 'flower', 'mushroom', 'mushroom','mushroom','mushroom', 'star', 'star', 'star', 'star', '1up', '1up', '10-coins','10-coins', '20-coins', '20-coins'];
+  let deckCards = ['flower', 'flower', 'flower', 'flower', 'mushroom', 'mushroom','mushroom','mushroom', 'star', 'star', '1up', '1up', '10-coins','10-coins', '20-coins', '20-coins'];
   // console.log(deckCards);
 
   // This hides Cards & Display
@@ -49,7 +49,7 @@ $(() => {
 
     divIndex = 1;
 
-    deckCards = ['flower', 'flower', 'flower', 'flower', 'mushroom', 'mushroom','mushroom','mushroom', 'star', 'star', 'star', 'star', '1up', '1up', '10-coins','10-coins', '20-coins', '20-coins'];
+    deckCards = ['flower', 'flower', 'flower', 'flower', 'mushroom', 'mushroom','mushroom','mushroom', 'star', 'star', '1up', '1up', '10-coins','10-coins', '20-coins', '20-coins'];
     $cards.find('img').css({"pointer-events": "auto"});
     $cards.find('img').off();
     $cards.find('img').attr({"src": ""});
