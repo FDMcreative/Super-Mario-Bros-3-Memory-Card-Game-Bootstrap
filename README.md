@@ -3,7 +3,7 @@
 ####email: [federico.delmonte@gmail.com](federico.delmonte@gmail.com)
 ---
 # Super Mario Bros 3 - Memory Card Game
-### *Do you remember that card game in that famous videogame? Here it is...refactored with Bootstrap
+### *Do you remember that card game in that famous videogame? Here it is...refactored with Bootstrap*
 -
 
 This project recreates a minigame present in an old Nintendo videogame making use of bootstrap.
@@ -16,6 +16,6 @@ It is fully scalable on all devices.
 
 Difficulties:
 
--Compared to the non-bootstrap version, I had to change the image from being a div-background to being an img-div so it can scale with the columns.
+- Compared to the non-bootstrap version, I had to change the image from being a div-background to being an img-div so it can scale with the columns.
 - Making the cards not focused after being clicked (not implemented yet).
 - Audio in Autoplay (not implemented yet).
