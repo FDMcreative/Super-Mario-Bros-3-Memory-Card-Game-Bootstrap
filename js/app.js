@@ -100,7 +100,7 @@ $(() => {
       $(e.target).attr({'src':'./images/' + $(e.target).attr('id') + '.jpg'});
 
       twoPicks[i] = $(e.target).attr('id');
-      $(e.target).css({"pointer-events": "none", "background-color":"grey"})
+      $(e.target).css({"pointer-events": "none"})
 
       console.log('twoPicks: ' + twoPicks);
       // console.log(twoPicks[1]);
