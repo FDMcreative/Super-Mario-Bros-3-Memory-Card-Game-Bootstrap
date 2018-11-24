@@ -10,7 +10,7 @@
 ### *Do you remember that card game in that famous videogame?*
 ### Here it is... refactored with Bootstrap*
 
--
+--
 
 This project recreates a minigame present in an old Nintendo videogame making use of bootstrap.
 
@@ -18,7 +18,7 @@ The basic functionalities are all present: selecting the cards, matching, list o
 
 It is fully scalable on all devices.
 
--
+--
 
 Difficulties:
 
